@@ -15,7 +15,8 @@ $(document).ready(function(){
 		$('.previous').hide();
 
 		$(aa.mockups).each(function(){
-	        $('<img/>')[0].src = mockupDir + '/' + this;	        
+	        $('<img/>')[0].src = '/' + mockupDir + '/' + this;	        
+	        console.log( '/' + mockupDir + '/' + this );
 	    });
 	}
 
