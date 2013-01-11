@@ -12,11 +12,11 @@ It gives them nav buttons to view Next & Previous images.
 It could also be used to display mockups using S3.
 
 ## Usage
-* Add your design mockup images to the /mockups directory (.jpg, .png, .gif)
+* Add your design mock-up images to the /mockups directory (.jpg, .png, .gif)
 * Add the file names of the images in the array in index.html (around line 27)
 
 ```javascript
-    // Add your mockup images to the /mockups directory and
+    // Add your mock-up images to the /mockups directory and
     // add the filenames to the array below:
     // For example:
     // aa.mockups = ['home-mockup.jpg', 
@@ -28,5 +28,6 @@ It could also be used to display mockups using S3.
 	];
 ```
 
-Images should be added to the array in the order you'd like them to appear
-to the client.
+* Images should be added to the array in the order you'd like them to appear to the client.
+* Add the directory to the Public directory in your Dropbox
+* In the Dropbox web-interface, right-click on `index.html` and choose "Copy Public Link"
