@@ -13,6 +13,10 @@ $(document).ready(function(){
 		$('span#imageNumber').text( aa.currentIndex + 1 );
 		$('#holder').html('<img src="' + mockupDir + '/' + aa.mockups[aa.currentIndex] + '" />'); 
 		$('.previous').hide();
+
+		$(aa.mockups).each(function(){
+	        $('<img/>')[0].src = mockupDir + '/' + this;	        
+	    });
 	}
 
 	// no nav if single image
@@ -24,10 +28,11 @@ $(document).ready(function(){
 	// Prev & Next buttons
 	$('a').click(function()
 	{
-
 		$('.alert').fadeOut('fast');
 		
 		var $this = $(this);
+		$('#holder').find('img').fadeOut('slow');
+		$('#holder').html('<img src')
 
 		if( $this.hasClass('next')){
 			$('.previous').show();
@@ -51,7 +56,6 @@ $(document).ready(function(){
 		}	
 
 		// do image transitions
-		$('#holder').find('img').fadeOut('slow');
 		$('#holder').html('<img src="' + mockupDir + '/' + aa.mockups[ aa.currentIndex ] + '" />').css({'display': 'none'}).fadeIn('slow'); 			
 		
 		var imageNumber = aa.currentIndex + 1;
