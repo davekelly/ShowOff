@@ -1,17 +1,33 @@
-A simple way of displaying design mockups in a webpage for review
+A simple way of displaying design mockups in a webpage for review.
 
+## Overview
+Client side tool to display a set of design mockups in a web page.
+Add your design mockups to the /mockups directory and add the filenames
+to index.html. 
 
-Used for review of images by clients. 
+The use case for it is to drop it into the Public directory in Dropbox,
+grab the Public URL to the index.html file, and send it to your client.
+It gives them nav buttons to view Next & Previous images.
 
-To set it up:
+It could also be used to display mockups using S3.
 
-1. Add the images you want to display to the /mockups
-directory.
-2. Add the file names of the images to index.html (around Line 23):
-	For example, 
-	aa.mockups = ['home-mockup.jpg', 'about-mockup.png', 'registration-mockup.jpg'];                 
+## Usage
+* Add your design mock-up images to the /mockups directory (.jpg, .png, .gif)
+* Add the file names of the images in the array in index.html (around line 27)
 
-Add the file names in the order you'd like them displayed.
+```javascript
+    // Add your mock-up images to the /mockups directory and
+    // add the filenames to the array below:
+    // For example:
+    // aa.mockups = ['home-mockup.jpg', 
+    // 				 'about-mockup.png', 
+    // 				 'registration-mockup.gif'
+    // 	];
+    aa.mockups = [
 
-I normally create a directory inside the Public directory of my Dropbox, 
-then grab the Public link for the index.html file and give that to a client.
+	];
+```
+
+* Images should be added to the array in the order you'd like them to appear to the client.
+* Add the directory to the Public directory in your Dropbox
+* In the Dropbox web-interface, right-click on `index.html` and choose "Copy Public Link"
